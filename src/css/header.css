@@ -1,0 +1,178 @@
+header {
+    display: grid;
+    grid-template-areas:
+        "header-logo header-navegation";
+    align-items: center;
+    padding: 0 40px;
+    margin: auto;
+    height: 68px;
+}
+
+.header-logo {
+    grid-area: header-logo;
+    font-family: var(--font-secundary);
+    font-size: var(--font-size-large);
+    color: var(--color-accent);
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.header-logo:hover {
+    scale: 1.04;
+    cursor: pointer;
+}
+
+.header-navegation {
+    grid-area: header-navegation;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-navegation ul {
+    display: flex;
+    justify-content: end;
+}
+
+.header-navegation ul li a {
+    font-family: var(--font-secundary);
+    color: var(--color-primary);
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+    padding: 0 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.header-navegation ul li a:hover {
+    color: var(--color-accent);
+    cursor: pointer;
+}
+
+.header-navegation input {
+    display: none;
+}
+
+/*  ==================== Responsive Design ==================== */
+@media (max-width: 920px) {
+    header {
+        grid-template-areas:
+            "header-logo"
+            "header-navegation";
+    }
+
+    .header-logo {
+        justify-self: center;
+    }
+
+    .header-navegation {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        grid-template-areas:
+            "header-logo header-navegation";
+    }
+
+    .header-logo {
+        justify-self: left;
+    }
+
+    .header-navegation label .menu {
+        display: none;
+        width: 50px;
+        height: 50px;
+        align-self: flex-end;
+    }
+
+    .header-navegation label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-navegation label .menu .hamburguer {
+        display: block;
+        height: 2px;
+        width: 30px;
+        background-color: var(--color-primary);
+        position: relative;
+        top: 40px;
+        left: 0px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .header-navegation label .menu .hamburguer::before,
+    .header-navegation label .menu .hamburguer::after {
+        content: "";
+        background-color: var(--color-primary);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: 0.2s ease-in-out;
+    }
+
+    .header-navegation label .menu .hamburguer::before {
+        top: -10px;
+    }
+
+    .header-navegation label .menu .hamburguer::after {
+        bottom: -10px;
+    }
+
+    .header-navegation input {
+        display: none;
+    }
+
+    .header-navegation input:checked~label .menu .hamburguer {
+        transform: rotate(45deg);
+    }
+
+    .header-navegation input:checked~label .menu .hamburguer::before {
+        transform: rotate(90deg);
+        top: 0;
+    }
+
+    .header-navegation input:checked~label .menu .hamburguer::after {
+        transform: rotate(90deg);
+        bottom: 0;
+    }
+
+    .header-navegation ul {
+        display: none;
+        width: 200px;
+        background-color: var(--color-secundary);
+        padding: 10px;
+    }
+
+    .header-navegation label .menu {
+        display: block;
+    }
+
+    .header-navegation label .menu:hover {
+        cursor: pointer;
+    }
+
+    .header-navegation input:checked~ul {
+        display: block;
+    }
+
+    .header-navegation {
+        position: absolute;
+        top: 8px;
+        right: 40px;
+        z-index: 1;
+    }
+
+    .header-navegation ul li a {
+        display: block;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .header-navegation label .menu {
+        position: relative;
+        top: -15px;
+        right: -20px;
+    }
+}

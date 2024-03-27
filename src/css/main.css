@@ -1,0 +1,111 @@
+main {
+    display: grid;
+    grid-template-areas:
+        "main-image main-text"
+        "main-footer main-footer";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto 50px;
+    height: calc(100vh - 68px);
+}
+
+.main-image {
+    grid-area: main-image;
+    justify-self: end;
+    align-self: center;
+    height: 80%;
+    width: 80%;
+    background-image: url(../images/dengue-main.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.main-text {
+    grid-area: main-text;
+    justify-self: left;
+    align-self: center;
+    padding: 10px;
+}
+
+.main-text h1 {
+    text-align: center;
+    font-size: var(--font-size-extra-large);
+}
+
+.main-text h1 span {
+    color: var(--color-accent);
+}
+
+.main-text h2 {
+    font-size: var(--font-size-medium);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.main-text .buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-text button {
+    color: var(--color-secundary);
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    padding: 10px;
+    width: 100px;
+}
+
+.main-text button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-secundary);
+}
+
+.main-footer {
+    grid-area: main-footer;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.main-footer a {
+    text-decoration: underline;
+}
+
+.main-footer a:hover {
+    color: var(--color-accent);
+}
+
+@media (max-width: 920px) {
+    main {
+        grid-template-areas:
+            "main-image"
+            "main-text"
+            "main-footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 60% calc(40% - 50px) 50px;
+    }
+
+    .main-image {
+        justify-self: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .main-text {
+        justify-self: center;
+    }
+
+    .main-text h1 {
+        font-size: var(--font-size-large);
+    }
+
+    .main-text h2 {
+        font-size: var(--font-size-base);
+        padding: 10px 0;
+    }
+}

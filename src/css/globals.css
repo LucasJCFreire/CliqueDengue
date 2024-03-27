@@ -1,0 +1,52 @@
+/*  ==================== Variables ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+:root {
+    --color-primary: #2B1E0D;
+    --color-secundary: #F5F5DC;
+    --color-accent: #8B0000;
+    --color-background: #FFA500;
+    --color-element-background: rgba(0, 0, 0, 0.5);
+
+    --font-primary: 'Roboto', sans-serif;
+    --font-secundary: 'Poppins', sans-serif;
+
+    --font-size-small: 1.2rem;
+    --font-size-base: 1.6rem;
+    --font-size-medium: 2rem;
+    --font-size-large: 2.5rem;
+    --font-size-extra-large: 3rem;
+}
+
+/*  ==================== Resets ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+    color: var(--color-primary);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*  ==================== Basic Structure ==================== */
+html {
+    font-size: 62.5%;
+    font-family: var(--font-primary);
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to top, var(--color-background) 60%, var(--color-secundary));
+    min-width: 350px;
+    max-width: 1250px;
+    margin: auto;
+    height: 100vh;
+    overflow: hidden;
+}
