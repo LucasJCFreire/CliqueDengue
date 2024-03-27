@@ -7,49 +7,205 @@
     <link rel="stylesheet" href="./src/css/globals.css">
     <link rel="stylesheet" href="./src/css/header.css">
     <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="./src/css/slider.css">
     <title>Clique Dengue</title>
 </head>
-<header>
-    <a class="header-logo">Clique Dengue</a>
-    <nav class="header-navegation">
-        <input type="checkbox" id="menu-hamburguer">
-        <label for="menu-hamburguer">
-            <div class="menu">
-                <span class="hamburguer"></span>
-            </div>
-        </label>
-        <ul>
-            <li><a id="bt-menuInformation">Informações</a></li>
-            <li><a id="bt-menuSymptoms">Sintomas</a></li>
-            <li><a id="bt-menuTreatment">Tratamento</a></li>
-            <li><a id="bt-menuPrevention">Prevenção</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <div class="main-text">
-        <h1><span>Clique</span> para se informar,<br><span>Clique</span> para se proteger!</h1>
-        <h2>Informação para ação contra a dengue.</h2>
-        <div class="buttons">
-            <button class="btn-info">Informações</button>
-            <button class="btn-quiz">Quiz</button>
-        </div>
-    </div>
-    <div class="main-image"></div>
-    <div class="main-footer">
-        <p>
-            Criado por Lucas Jones | <a target="_blank" href="https://lucasjcfreire.github.io/portfolio/">Portfólio</a>
-        </p>
-        <p>
-            As informações deste site foram baseadas no <a target="_blank"
-                href="https://www.saude.sp.gov.br/resources/ses/perfil/cidadao/orientacao/guia_basico_de_dengue_.pdf">Guia
-                Básico de Dengue</a> disponivel no site do governo do Estado de São Paulo.
-        </p>
-    </div>
-</main>
 
 <body>
+    <header>
+        <a class="header-logo">Clique Dengue</a>
+        <nav class="header-navegation">
+            <input type="checkbox" id="menu-hamburguer">
+            <label for="menu-hamburguer">
+                <div class="menu">
+                    <span class="hamburguer"></span>
+                </div>
+            </label>
+            <ul>
+                <li><a id="bt-menuInformation">Informações</a></li>
+                <li><a id="bt-menuSymptoms">Sintomas</a></li>
+                <li><a id="bt-menuTreatment">Tratamento</a></li>
+                <li><a id="bt-menuPrevention">Prevenção</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main-text">
+            <h1><span>Clique</span> para se informar,<br><span>Clique</span> para se proteger!</h1>
+            <h2>Informação para ação contra a dengue.</h2>
+            <div class="buttons">
+                <button class="btn-info">Informações</button>
+                <button class="btn-quiz">Quiz</button>
+            </div>
+        </div>
+        <div class="main-image"></div>
+        <div class="main-footer">
+            <p>
+                Criado por Lucas Jones | <a target="_blank"
+                    href="https://lucasjcfreire.github.io/portfolio/">Portfólio</a>
+            </p>
+            <p>
+                As informações deste site foram baseadas no <a target="_blank"
+                    href="https://www.saude.sp.gov.br/resources/ses/perfil/cidadao/orientacao/guia_basico_de_dengue_.pdf">Guia
+                    Básico de Dengue</a> disponivel no site do governo do Estado de São Paulo.
+            </p>
+        </div>
+    </main>
+    <section class="slider hidden">
+        <div class="left-slide">
+            <div class="question">
+                <h2>Informações</h2>
+            </div>
+            <div class="question">
+                <h2>Sintomas</h2>
+            </div>
+            <div class="question">
+                <h2>Tratamento</h2>
+            </div>
+            <div class="question">
+                <h2>Prevenção</h2>
+            </div>
+        </div>
+        <div class="right-slide">
+            <div class="response" id="prevention">
+                <div class="element">
+                    <h3>Mantenha a caixa d'água sempre fechada com tampa adequada</h3>
+                    <img src="./src/images/dengue-caixadagua.jpg" alt="caixa-agua">
+                </div>
 
+                <div class="element">
+                    <h3>Encha de areia até a borda os pratinhos dos vasos de planta.</h3>
+                    <img src="./src/images/dengue-areiavaso.jpg" alt="areia-vaso">
+                </div>
+
+                <div class="element">
+                    <h3>Remova folhas, galhos e tudo que possa impedir a água de correr pelas calhas</h3>
+                    <img src="./src/images/dengue-calhas.jpg" alt="calhas">
+                </div>
+
+                <div class="element">
+                    <h3>Coloque o lixo em sacos plásticos e mantenha a lixeira bem fechada. Não jogue lixo em
+                        terrenos baldios</h3>
+                    <img src="./src/images/dengue-lixeiratampada.jpg" alt="garrafas">
+                </div>
+
+                <div class="element">
+                    <h3>Guarde seus pneus velhos sem água e em local coberto</h3>
+                    <img src="./src/images/dengue-pneu.jpg" alt="pneus">
+                </div>
+
+                <div class="element">
+                    <h3>Guarde garrafas sempre de cabeça pra baixo</h3>
+                    <img src="./src/images/dengue-garrafas.jpg" alt="garrafas">
+                </div>
+            </div>
+
+            <div class="response" id="treatment">
+                <div class="element">
+                    <h3>Está com sintomas?</h3>
+                    <p>Procure atendimento em uma unidade de saúde!</p>
+                    <img src="./src/images/medico.png" alt="medico-tratamento">
+                </div>
+
+                <div class="element">
+                    <h3>Não se automedique, é perigoso</h3>
+                    <p>Há medicamento que são contra indicados, então siga corretamente as prescrições do seu médico.
+                    </p>
+                    <img src="./src/images/orientacoes.jpg" alt="orientacoes-tratamento">
+                </div>
+
+                <div class="element">
+                    <h3>Repouse e se hidrate</h3>
+                    <p>O autocuidado e a hidratação são essenciais para a recuperação</p>
+                    <img src="./src/images/agua.png" alt="agua-tratamento">
+                </div>
+
+                <div class="element">
+                    <h3>Atenção, dengue mata!</h3>
+                    <p>Há casos de dengue grave que pode haver a necessidade de internação. Fique atento ao
+                        desenvolvimento dos sintomas</p>
+                    <img src="./src/images/megafone-atencao.png" alt="megafone-tratamento">
+                </div>
+            </div>
+            <div class="response" id="symptoms">
+                <div class="element">
+                    <h3>Dores de cabeça</h3>
+                    <img src="./src/images/Dor-cabeca.png" alt="dor-cabeca">
+                </div>
+
+                <div class="element">
+                    <h3>Dores no corpo</h3>
+                    <img src="./src/images/dores-no-corpo.png" alt="dores-no-corpo">
+                </div>
+
+                <div class="element">
+                    <h3>Febre alta</h3>
+                    <img src="./src/images/febre.png" alt="febre">
+                </div>
+
+                <div class="element">
+                    <h3>Náuseas e vômitos</h3>
+                    <img src="./src/images/vomito.png" alt="vomito">
+                </div>
+
+                <div class="element">
+                    <h3>Manchas na pele</h3>
+                    <img src="./src/images/manchas-na-pele.png" alt="manchas">
+                </div>
+
+                <div class="element">
+                    <h3>Fraqueza e cansaço</h3>
+                    <img src="./src/images/fraqueza.png" alt="fraqueza">
+                </div>
+            </div>
+
+            <div class="response" id="information">
+                <div class="element">
+                    <h3>O que é dengue?</h3>
+                    <p>É uma doença infecciosa causada por um vírus e transmitida pelo mosquito Aedes aegypti infectado.
+                    </p>
+                    <img src="./src/images/doente-info.png" alt="doente-info">
+                </div>
+
+                <div class="element">
+                    <h3>Quem é o agente transmissor?</h3>
+                    <p>O mosquito Aedes aegypti é o principal vetor de dengue no mundo.</p>
+                    <img src="./src/images/dengue-info.png" alt="dengue-info">
+                </div>
+
+                <div class="element">
+                    <h3>Como a dengue é transmitida para o homem?</h3>
+                    <p>Após ter sido picado por um mosquito fêmea infectado, a pessoa apresenta sintomas da doença
+                        depois de um período que pode variar de 03 a 15dias.</p>
+                </div>
+
+                <div class="element">
+                    <h3>Como o mosquito da dengue é infectado?</h3>
+                    <p>Ao picar uma pessoa que apresenta vírus da dengue no sangue, o mosquito se infecta e após um
+                        período de aproximadamente 10 dias, está apto a transmitir a doença para outras pessoas.</p>
+                </div>
+
+                <div class="element">
+                    <h3>Qual o período de transmissibilidade?</h3>
+                    <p>O período que uma pessoa pode passar a doença para o mosquito começa um dia antes do
+                        aparecimento
+                        dos sintomas e vai até o sexto dia da doença, periodo em que o vírus está presente no
+                        sangue.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="action-buttons">
+            <button class="down-button">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+            <button class="up-button">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </section>
+    <script src="./src/js/links.js"></script>
+    <script src="./src/js/slider.js"></script>
 </body>
 
 </html>

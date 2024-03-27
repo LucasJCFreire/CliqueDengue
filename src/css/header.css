@@ -34,6 +34,10 @@ header {
     justify-content: end;
 }
 
+.header-navegation ul li {
+    transition: 0.2s ease-in-out;
+}
+
 .header-navegation ul li a {
     font-family: var(--font-secundary);
     color: var(--color-primary);
@@ -46,6 +50,10 @@ header {
 .header-navegation ul li a:hover {
     color: var(--color-accent);
     cursor: pointer;
+}
+
+.header-navegation ul li:hover {
+    scale: 1.04;
 }
 
 .header-navegation input {

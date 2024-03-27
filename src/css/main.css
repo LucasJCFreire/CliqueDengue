@@ -48,6 +48,7 @@ main {
 }
 
 .main-text button {
+    font-size: var(--font-size-small);
     color: var(--color-secundary);
     background-color: var(--color-primary);
     border: none;
@@ -60,6 +61,7 @@ main {
 .main-text button:hover {
     background-color: var(--color-accent);
     color: var(--color-secundary);
+    scale: 1.05;
 }
 
 .main-footer {
@@ -108,4 +110,8 @@ main {
         font-size: var(--font-size-base);
         padding: 10px 0;
     }
+}
+
+main.hidden {
+    display: none;
 }

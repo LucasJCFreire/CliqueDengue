@@ -1,0 +1,157 @@
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: calc(100vh - 78px);
+}
+
+.left-slide {
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: calc((3* (100vh - 68px))* -1);
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.left-slide>div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-slide>div h2 {
+    transform: rotate(-90deg);
+    font-size: var(--font-size-extra-large);
+}
+
+.right-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 80%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.right-slide>div {
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    color: gray;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+}
+
+button:hover {
+    color: black;
+}
+
+.action-buttons button {
+    position: absolute;
+    left: 15%;
+    top: 46%;
+    z-index: 100;
+}
+
+.action-buttons .down-button {
+    border-radius: 5px;
+}
+
+.action-buttons .up-button {
+    transform: translateY(-120%);
+    border-radius: 5px;
+}
+
+#information,
+#symptoms,
+#treatment,
+#prevention {
+    display: grid;
+    padding: 10px;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+}
+
+.element {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--color-secundary);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: var(--font-size-base);
+}
+
+.element h3 {
+    font-size: var(--font-size-base);
+    font-weight: bold;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.element img {
+    align-self: center;
+    padding: 0 10px;
+    margin: auto;
+    object-fit: cover;
+    max-width: 60%;
+    max-height: 75%;
+}
+
+#treatment p {
+    padding: 20px;
+}
+
+@media (max-width: 681px) {
+    .action-buttons button {
+        left: 7%;
+        top: auto;
+        bottom: 15%;
+    }
+
+    .element p {
+        font-size: var(--font-size-small);
+    }
+
+    .element h3 {
+        font-size: var(--font-size-small);
+    }
+
+    #information .element img {
+        min-height: 50%;
+    }
+
+    #prevention .element {
+        flex-direction: row;
+    }
+
+    #prevention .element h3 {
+        align-self: center;
+        flex: 1;
+    }
+
+    #treatment p {
+        padding: 0px;
+    }
+
+    #treatment img {
+        min-height: 50%;
+    }
+}
+
+@media (max-width: 681px) {}
+
+.slider.hidden {
+    display: none;
+}
