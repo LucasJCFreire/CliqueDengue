@@ -2,14 +2,14 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: calc(100vh - 78px);
+    height: calc(100vh - 110px);
 }
 
 .left-slide {
     height: 100%;
     width: 20%;
     position: absolute;
-    top: calc((3* (100vh - 68px))* -1);
+    top: calc((3* (100vh - 110px))* -1);
     left: 0;
     transition: transform 0.5s ease-in-out;
 }

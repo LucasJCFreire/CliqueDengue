@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./src/css/header.css">
     <link rel="stylesheet" href="./src/css/main.css">
     <link rel="stylesheet" href="./src/css/slider.css">
+    <link rel="stylesheet" href="./src/css/quiz.css">
     <title>Clique Dengue</title>
 </head>
 
@@ -69,7 +70,7 @@
         <div class="right-slide">
             <div class="response" id="prevention">
                 <div class="element">
-                    <h3>Mantenha a caixa d'água sempre fechada com tampa adequada</h3>
+                    <h3>Mantenha a caixa d'água sempre fechada com tampa adequada.</h3>
                     <img src="./src/images/dengue-caixadagua.jpg" alt="caixa-agua">
                 </div>
 
@@ -79,23 +80,23 @@
                 </div>
 
                 <div class="element">
-                    <h3>Remova folhas, galhos e tudo que possa impedir a água de correr pelas calhas</h3>
+                    <h3>Remova folhas, galhos e tudo que possa impedir a água de correr pelas calhas.</h3>
                     <img src="./src/images/dengue-calhas.jpg" alt="calhas">
                 </div>
 
                 <div class="element">
                     <h3>Coloque o lixo em sacos plásticos e mantenha a lixeira bem fechada. Não jogue lixo em
-                        terrenos baldios</h3>
+                        terrenos baldios.</h3>
                     <img src="./src/images/dengue-lixeiratampada.jpg" alt="garrafas">
                 </div>
 
                 <div class="element">
-                    <h3>Guarde seus pneus velhos sem água e em local coberto</h3>
+                    <h3>Guarde seus pneus velhos sem água e em local coberto.</h3>
                     <img src="./src/images/dengue-pneu.jpg" alt="pneus">
                 </div>
 
                 <div class="element">
-                    <h3>Guarde garrafas sempre de cabeça pra baixo</h3>
+                    <h3>Guarde garrafas sempre de cabeça pra baixo.</h3>
                     <img src="./src/images/dengue-garrafas.jpg" alt="garrafas">
                 </div>
             </div>
@@ -116,14 +117,14 @@
 
                 <div class="element">
                     <h3>Repouse e se hidrate</h3>
-                    <p>O autocuidado e a hidratação são essenciais para a recuperação</p>
+                    <p>O autocuidado e a hidratação são essenciais para a recuperação.</p>
                     <img src="./src/images/agua.png" alt="agua-tratamento">
                 </div>
 
                 <div class="element">
                     <h3>Atenção, dengue mata!</h3>
                     <p>Há casos de dengue grave que pode haver a necessidade de internação. Fique atento ao
-                        desenvolvimento dos sintomas</p>
+                        desenvolvimento dos sintomas.</p>
                     <img src="./src/images/megafone-atencao.png" alt="megafone-tratamento">
                 </div>
             </div>
@@ -189,7 +190,7 @@
                     <h3>Qual o período de transmissibilidade?</h3>
                     <p>O período que uma pessoa pode passar a doença para o mosquito começa um dia antes do
                         aparecimento
-                        dos sintomas e vai até o sexto dia da doença, periodo em que o vírus está presente no
+                        dos sintomas e vai até o sexto dia da doença, período em que o vírus está presente no
                         sangue.
                     </p>
                 </div>
@@ -204,8 +205,29 @@
             </button>
         </div>
     </section>
+    <section class="quiz hidden">
+        <div class="progress">
+            <div class="progress--bar"></div>
+        </div>
+
+        <div class="questionArea">
+            <div class="quiz-question">...</div>
+            <div class="quiz-options">
+            </div>
+        </div>
+
+        <div class="scoreArea">
+            <img src="./src/images/trofeu3.jpg" class="quizImage" />
+            <div class="scoreText1">...</div>
+            <div class="scorePct">...</div>
+            <div class="scoreText2">...</div>
+            <button>Fazer novamente</button>
+        </div>
+    </section>
     <script src="./src/js/links.js"></script>
     <script src="./src/js/slider.js"></script>
+    <script src="./src/js/questions.js"></script>
+    <script src="./src/js/quiz.js"></script>
 </body>
 
 </html>

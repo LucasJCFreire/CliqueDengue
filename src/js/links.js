@@ -7,7 +7,7 @@ const menuInformation = document.querySelector('#bt-menuInformation')
 const menuSymptoms = document.querySelector('#bt-menuSymptoms')
 const menuTreatment = document.querySelector('#bt-menuTreatment')
 const menuPrevention = document.querySelector('#bt-menuPrevention')
-// const quizSection = document.querySelector('.quiz')
+const quizSection = document.querySelector('.quiz')
 
 btnInfo.addEventListener('click', () => goToPage(3))
 menuInformation.addEventListener('click', () => goToPage(3))
@@ -25,13 +25,13 @@ btnQuiz.addEventListener('click', () => {
 headerLogo.addEventListener('click', () => {
     mainSection.classList.remove('hidden')
     sectionSlides.classList.add('hidden')
-    // quizSection.classList.add('hidden')
+    quizSection.classList.add('hidden')
 })
 
 function goToPage(page) {
     sectionSlides.classList.remove('hidden')
     mainSection.classList.add('hidden')
-    // quizSection.classList.add('hidden')
+    quizSection.classList.add('hidden')
     activeSlideIndex = page
     changeSlide()
 }

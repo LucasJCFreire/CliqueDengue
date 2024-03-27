@@ -1,0 +1,134 @@
+.quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 68px);
+}
+
+.progress {
+    height: 5px;
+    position: fixed;
+    left: 0;
+    top: 68px;
+    right: 0;
+}
+
+.progress--bar {
+    background-color: var(--color-accent);
+    height: 100%;
+    transition: all ease .5s;
+}
+
+.questionArea,
+.scoreArea {
+    display: none;
+}
+
+.questionArea {
+    max-width: 600px;
+    width: 100%;
+}
+
+.questionArea .quiz-question {
+    color: var(--color-accent);
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    margin: 20px 10px;
+}
+
+.quiz-options .option {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    background-color: var(--color-element-background);
+    border-radius: 10px;
+    margin: 10px 10px;
+    color: var(--color-primary);
+    font-size: var(--font-size-medium);
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.quiz-options .option span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-right: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-secundary);
+}
+
+.quiz-options .option:hover {
+    background-color: var(--color-accent);
+    color: var(--color-secundary);
+}
+
+.scoreArea {
+    background-color: var(--color-secundary);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.quizImage {
+    width: auto;
+    height: 200px;
+    margin-bottom: 10px;
+    border: 6px solid var(--color-accent);
+    border-radius: 15px;
+}
+
+.scoreText1 {
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.scorePct {
+    color: var(--color-primary);
+    font-size: var(--font-size-extra-large);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.scoreText2 {
+    font-size: var(--font-size-base);
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.scoreArea button {
+    border: 0;
+    border-radius: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-secundary);
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.scoreArea button:hover {
+    background-color: var(--color-accent);
+    scale: 1.03;
+}
+
+@media (max-width: 700px) {
+    .questionArea .quiz-question {
+        font-size: var(--font-size-base);
+    }
+
+    .quiz-options .option {
+        font-size: var(--font-size-base);
+    }
+}
+
+.quiz.hidden {
+    display: none;
+}
