@@ -114,6 +114,10 @@ button:hover {
     padding: 20px;
 }
 
+#treatment .element img {
+    max-width: 40%;
+}
+
 @media (max-width: 681px) {
     .action-buttons button {
         left: 5%;

@@ -61,7 +61,7 @@ header {
 }
 
 /*  ==================== Responsive Design ==================== */
-@media (max-width: 920px) {
+@media (max-width: 1000px) {
     header {
         grid-template-areas:
             "header-logo"
@@ -77,7 +77,7 @@ header {
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     header {
         grid-template-areas:
             "header-logo header-navegation";
